@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image to Hopscotch blocks thing</title>
+<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+<h2>Add image to make into Hopscotch code</h2>
+<p>Works best with png images</p>
+<input id="imageInput" type="file" accept="image/png, image/jpeg"></input>
+<br />
+<p id="noImage">There's no image!</p>
+<p>Downloading a project instead of editing it in yourself? Add the old version here!</p>
+<input id="hopscotchInput" type="file" accept=".hopscotch"></input>
+<h2>Pixel size:
+<input id="pixelSizeInput" value="1" class="smallInput"></input>
+</h2>
+<h2> Location of bottom left corner: 
+X: <input id="offsetXInput" value="0" class="smallInput"></input> 
+Y: <input id="offsetYInput" value="0" class="smallInput"></input>
+</h2>
+<select id="movementMethod">
+<option value="forward">With draw a trail block (Works in all project versions. Bigger file size)</option>
+<option value="leaveTrail">Without draw a trail block (Does not work with project version > 24)</option>
+</select>
+<br />
+
+<select id="includeClones">
+<option value="block">Replace a block (slow draw)</option>
+<option value="ability">Replace an ability (fast draw)</option>
+</select>
+<br />
+<p id="cloneNumberP">Number of clones (each gets an even amount of rows.) <input id="cloneNumberInput" value="10" class="smallInput"></input><br />Make sure to add the custom block in both when game starts and when cloned.</p>
+
+<br />
+<button id="createHopscotchButton">Create Hopscotch code</button>
+<br />
+<div id="loading" class="noDisplay">
+<img src="loading.gif" width="200px" alt="LoadingGif">
+</div>
+<br />
+<br />
+<textarea id="output"></textarea>
+<br />
+<script src="blockMaker.js"></script>
+<script src="image to hopscotch.js"></script>
+</body>
+</html>
