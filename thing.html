@@ -19,20 +19,22 @@
 X: <input id="offsetXInput" value="0" class="smallInput"></input> 
 Y: <input id="offsetYInput" value="0" class="smallInput"></input>
 </h2>
-<select id="movementMethod">
+<div style="display:none;"><select id="movementMethod">
 <option value="forward">With draw a trail block (Works in all project versions. Bigger file size)</option>
 <option value="leaveTrail">Without draw a trail block (Does not work with project version > 24)</option>
 </select>
 <br />
 
 <select id="includeClones">
+  <option value="ability">Replace an ability (fast draw)</option>
 <option value="block">Replace a block (slow draw)</option>
-<option value="ability">Replace an ability (fast draw)</option>
+
 </select>
 <br />
-<p id="cloneNumberP">Number of clones (each gets an even amount of rows.) <input id="cloneNumberInput" value="10" class="smallInput"></input><br />Make sure to add the custom block in both when game starts and when cloned.</p>
+<p id="cloneNumberP">Number of clones (each gets an even amount of rows.) <input id="cloneNumberInput" value="10000000000000" class="smallInput"></input><br />Make sure to add the custom block in both when game starts and when cloned.</p>
 
 <br />
+</div>
 <button id="createHopscotchButton">Create Hopscotch code</button>
 <br />
 <div id="loading" class="noDisplay">
